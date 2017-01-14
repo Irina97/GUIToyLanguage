@@ -8,10 +8,7 @@ import Repository.*;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
@@ -93,5 +90,19 @@ public class Controller {
         }catch(Exception e){
             throw new ControllerException(e.getMessage());
         }
+    }
+    public int getNrPrg(){
+        return repo.getNrPrg();
+    }
+
+    public List<String> getProgramStatesID(){
+        List<ProgramState> list=repo.getPrgStates();
+        List<String> listID= new ArrayList<>();
+
+        for(ProgramState p: list){
+            String str="Program State "+  p.getID();
+            listID.add(str);
+        }
+        return listID;
     }
 }

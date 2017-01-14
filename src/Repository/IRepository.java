@@ -34,4 +34,5 @@ public interface IRepository {
         }
     }
     public void clearFile() throws RepositoryException;
+    public int getNrPrg();
 }

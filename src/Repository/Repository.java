@@ -113,5 +113,8 @@ public class Repository implements IRepository {
             throw new RepositoryException(e.getMessage());
         }
     }
+    public int getNrPrg(){
+        return repo.size();
+    }
 
 }

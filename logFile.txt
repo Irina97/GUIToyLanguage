@@ -1,0 +1,310 @@
+ID: 14
+
+Execution Stack: 
+{{ v= 10;new(a, 22)};{fork(writeHeap(a, 30));{fork( v= 32);{fork(Print(v));{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+{ v= 10;new(a, 22)}
+{fork(writeHeap(a, 30));{fork( v= 32);{fork(Print(v));{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+ v= 10
+new(a, 22)
+{fork(writeHeap(a, 30));{fork( v= 32);{fork(Print(v));{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+new(a, 22)
+{fork(writeHeap(a, 30));{fork( v= 32);{fork(Print(v));{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}}}}
+
+Symbol Table: 
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+{fork(writeHeap(a, 30));{fork( v= 32);{fork(Print(v));{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}}}}
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->22
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+fork(writeHeap(a, 30))
+{fork( v= 32);{fork(Print(v));{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}}}
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->22
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+{fork( v= 32);{fork(Print(v));{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}}}
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->22
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+writeHeap(a, 30)
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->22
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+fork( v= 32)
+{fork(Print(v));{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}}
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+{fork(Print(v));{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}}
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ v= 32
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+fork(Print(v))
+{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+{fork(Print(readHeap(a)));{Print(v);Print(readHeap(a))}}
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+Print(v)
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+fork(Print(readHeap(a)))
+{Print(v);Print(readHeap(a))}
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+10
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+{Print(v);Print(readHeap(a))}
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+10
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+Print(readHeap(a))
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+10
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+Print(v)
+Print(readHeap(a))
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+10
+30
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
+ID: 14
+
+Execution Stack: 
+Print(readHeap(a))
+
+Symbol Table: 
+a->1
+v->10
+
+Output: 
+10
+30
+10
+
+File Table: 
+
+Heap: 
+1->30
+::::::::::::::::::::::::::::
