@@ -14,4 +14,5 @@ public interface IFileTable<K,V> extends Serializable{
     boolean containsValue(V value);
     Collection<V> values();
     Iterable<Map.Entry<K,V>> getAll();
+    Set<K> keySet();
 }

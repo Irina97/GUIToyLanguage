@@ -29,4 +29,5 @@ public class Heap<K,V> implements IHeap<K,V> {
     public Map<K,V> getHeap(){
         return heap;
     }
+    public Set<K> keySet(){return heap.keySet();}
 }

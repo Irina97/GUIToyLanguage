@@ -54,6 +54,23 @@ public class Controller {
         }
 
     }
+    public void oneStepGUI(){
+        executor = Executors.newFixedThreadPool(2);
+        //remove the completed programs
+        List<ProgramState> prgList=removeCompletedPrg(repo.getPrgStates());
+        if (prgList.size() ==0) {
+            //display a window message saying that the execution terminates
+            executor.shutdownNow();
+        }
+        else {
+            try {
+                oneStepForAll(prgList);
+                executor.shutdownNow();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+    }
     public void executeAll() throws ControllerException {
         try {
             repo.clearFile();
@@ -61,12 +78,12 @@ public class Controller {
             throw new ControllerException(e.getMessage());
         }
         executor= Executors.newFixedThreadPool(2);
-        while(true){
-            List<ProgramState> prgList =removeCompletedPrg(repo.getPrgStates());
+         while(true){
+           List<ProgramState> prgList =removeCompletedPrg(repo.getPrgStates());
             if (prgList.size()==0)
                 break;
             oneStepForAll(prgList);
-        }
+           }
         executor.shutdownNow();
     }
     public IRepository getRepo(){
@@ -91,18 +108,11 @@ public class Controller {
             throw new ControllerException(e.getMessage());
         }
     }
-    public int getNrPrg(){
+    public int getNrPrgCtrl(){
         return repo.getNrPrg();
     }
 
-    public List<String> getProgramStatesID(){
-        List<ProgramState> list=repo.getPrgStates();
-        List<String> listID= new ArrayList<>();
-
-        for(ProgramState p: list){
-            String str="Program State "+  p.getID();
-            listID.add(str);
-        }
-        return listID;
+    public List<String> getProgramStatesIDCtrl(){
+        return repo.getProgramStateID();
     }
 }

@@ -1,5 +1,8 @@
 package Repository;
 import Model.ProgramState.ProgramState;
+import Model.Statement.Statement;
+import Utils.ExeStack;
+import Utils.IExeStack;
 
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
@@ -10,13 +13,13 @@ import java.util.List;
  */
 public interface IRepository {
     void addProgramState(ProgramState p);
-    public List<ProgramState> getPrgStates();
-    public void setPrgStates(List<ProgramState> list);
+     List<ProgramState> getPrgStates();
+     void setPrgStates(List<ProgramState> list);
     void logPrgStateExec(ProgramState p) throws RepositoryException;
     String getFilename();
     void writeToFile(String msg) throws RepositoryException;
     void serialize(ProgramState p,String filename) throws RepositoryException;
-    public ProgramState getProgramState(int index) throws RepositoryException;
+    ProgramState getProgramState(int index) throws RepositoryException;
     static ProgramState deserialize(String filename) throws RepositoryException{
         try{
             FileInputStream fileIn= new FileInputStream(filename);
@@ -33,6 +36,8 @@ public interface IRepository {
             throw new RepositoryException(e.getMessage());
         }
     }
-    public void clearFile() throws RepositoryException;
-    public int getNrPrg();
+    void clearFile() throws RepositoryException;
+    int getNrPrg();
+    List<String> getProgramStateID();
+
 }

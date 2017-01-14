@@ -42,4 +42,7 @@ public class SymbolTable<K,V> implements ISymbolTable<K,V> {
         }
         return newST;
     }
+    public Set<K> keySet(){
+        return map.keySet();
+    }
 }

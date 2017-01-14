@@ -18,4 +18,5 @@ public interface IHeap<K,V> extends Serializable{
     Set<Map.Entry<K,V>> entrySet();
     void setHeap(Map<K,V> newHeap);
     Map<K,V> getHeap();
+    Set<K> keySet();
 }

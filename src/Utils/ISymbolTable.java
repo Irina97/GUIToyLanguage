@@ -15,5 +15,6 @@ public interface ISymbolTable<K,V> extends Serializable{
     Iterable<Map.Entry<K,V>> getAll();
     Collection<V> values();
     ISymbolTable<K,V> clone();
+    Set<K> keySet();
 
 }

@@ -116,5 +116,13 @@ public class Repository implements IRepository {
     public int getNrPrg(){
         return repo.size();
     }
+    public List<String> getProgramStateID(){
+        ArrayList<String> list=new ArrayList<>();
+        for(ProgramState pr: repo){
+            String str="Program State "+pr.getID();
+            list.add(str);
+        }
+        return list;
+    }
 
 }

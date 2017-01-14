@@ -38,4 +38,7 @@ public class FileTable<K,V> implements IFileTable<K,V> {
     public Iterable<Map.Entry<K,V>> getAll(){
         return map.entrySet();
     }
+    public Set<K> keySet(){
+        return map.keySet();
+    }
 }
