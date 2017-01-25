@@ -4197,3 +4197,12034 @@ Heap:
 1->21
 2->25
 ::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}})
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 200
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)+ 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)- 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)}
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))})
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 300
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{lock(q);writeHeap(v2,(readHeap(v2)+ 5))}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 400
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+ m= 100
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 500
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(x)
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+Print(readHeap(v1))
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+unlock(x)
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}})
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 200
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)+ 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)- 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)}
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))})
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 300
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{lock(q);writeHeap(v2,(readHeap(v2)+ 5))}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 400
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+ m= 100
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 500
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}})
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 200
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)+ 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)- 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)}
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))})
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 300
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{lock(q);writeHeap(v2,(readHeap(v2)+ 5))}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 400
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+ m= 100
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 500
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(x)
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+Print(readHeap(v1))
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+unlock(x)
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{newLock(q);{fork({ v= 1;{Print(v);lock(q)}});lock(q)}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+newLock(q)
+{fork({ v= 1;{Print(v);lock(q)}});lock(q)}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+{fork({ v= 1;{Print(v);lock(q)}});lock(q)}
+
+Symbol Table: 
+q->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+fork({ v= 1;{Print(v);lock(q)}})
+lock(q)
+
+Symbol Table: 
+q->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 17
+
+Execution Stack: 
+lock(q)
+
+Symbol Table: 
+q->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{ v= 1;{Print(v);lock(q)}}
+
+Symbol Table: 
+q->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+ v= 1
+{Print(v);lock(q)}
+
+Symbol Table: 
+q->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{Print(v);lock(q)}
+
+Symbol Table: 
+q->1
+v->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+Print(v)
+lock(q)
+
+Symbol Table: 
+q->1
+v->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(q)
+
+Symbol Table: 
+q->1
+v->1
+
+Output: 
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(q)
+
+Symbol Table: 
+q->1
+v->1
+
+Output: 
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(q)
+
+Symbol Table: 
+q->1
+v->1
+
+Output: 
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(q)
+
+Symbol Table: 
+q->1
+v->1
+
+Output: 
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(q)
+
+Symbol Table: 
+q->1
+v->1
+
+Output: 
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(q)
+
+Symbol Table: 
+q->1
+v->1
+
+Output: 
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}})
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 200
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)+ 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)- 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)}
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))})
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 300
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+{lock(q);writeHeap(v2,(readHeap(v2)+ 5))}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+lock(q)
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 400
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+ m= 100
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 500
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(x)
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+Print(readHeap(v1))
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+unlock(x)
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}})
+{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 200;{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 200
+{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)+ 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)- 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)}
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 300;{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))})
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 300
+{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+{lock(q);writeHeap(v2,(readHeap(v2)+ 5))}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 400;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+lock(q)
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 400
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+ m= 100
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(x)
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+Print(readHeap(v1))
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}})
+{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 200
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)+ 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)- 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)}
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))})
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(x)
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+{lock(q);writeHeap(v2,(readHeap(v2)+ 5))}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+lock(q)
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+Print(readHeap(v1))
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+ m= 100
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+unlock(x)
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+{ v= 20;{for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+ v= 20
+{for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+{for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}
+
+Symbol Table: 
+v->20
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})}
+Print((v* 10))
+
+Symbol Table: 
+v->20
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+{ v= 0;while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}}
+Print((v* 10))
+
+Symbol Table: 
+v->20
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+ v= 0
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->20
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->0
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+{fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->0
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+fork({Print(v); v=(v+ 1)})
+ v=(v+ 1)
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->0
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+ v=(v+ 1)
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->0
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{Print(v); v=(v+ 1)}
+
+Symbol Table: 
+v->0
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+Print(v)
+ v=(v+ 1)
+
+Symbol Table: 
+v->0
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+{fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->1
+
+Output: 
+0
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+ v=(v+ 1)
+
+Symbol Table: 
+v->0
+
+Output: 
+0
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+fork({Print(v); v=(v+ 1)})
+ v=(v+ 1)
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->1
+
+Output: 
+0
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+ v=(v+ 1)
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->1
+
+Output: 
+0
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{Print(v); v=(v+ 1)}
+
+Symbol Table: 
+v->1
+
+Output: 
+0
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->2
+
+Output: 
+0
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+Print(v)
+ v=(v+ 1)
+
+Symbol Table: 
+v->1
+
+Output: 
+0
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+{fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->2
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+ v=(v+ 1)
+
+Symbol Table: 
+v->1
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+fork({Print(v); v=(v+ 1)})
+ v=(v+ 1)
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->2
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+ v=(v+ 1)
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->2
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{Print(v); v=(v+ 1)}
+
+Symbol Table: 
+v->2
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->3
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+Print(v)
+ v=(v+ 1)
+
+Symbol Table: 
+v->2
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+Print((v* 10))
+
+Symbol Table: 
+v->3
+
+Output: 
+0
+1
+2
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+ v=(v+ 1)
+
+Symbol Table: 
+v->2
+
+Output: 
+0
+1
+2
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+{ v= 20;{for(v= 4;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+ v= 20
+{for(v= 4;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+{for(v= 4;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}
+
+Symbol Table: 
+v->20
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+for(v= 4;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})}
+Print((v* 10))
+
+Symbol Table: 
+v->20
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+{ v= 4;while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}}
+Print((v* 10))
+
+Symbol Table: 
+v->20
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+ v= 4
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->20
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->4
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+Print((v* 10))
+
+Symbol Table: 
+v->4
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}})
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 200
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)+ 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)- 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)}
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))})
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 300
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+{lock(q);writeHeap(v2,(readHeap(v2)+ 5))}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+lock(q)
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 400
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+ m= 100
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 500
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(x)
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 1))
+unlock(q)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+unlock(q)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+Print(readHeap(v1))
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+unlock(x)
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+Print(readHeap(v2))
+unlock(q)
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+unlock(q)
+
+Symbol Table: 
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+26
+
+File Table: 
+
+Heap: 
+1->21
+2->26
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}})
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 200
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)+ 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)- 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)}
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))})
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 300
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+{lock(q);writeHeap(v2,(readHeap(v2)+ 5))}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+lock(q)
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 400
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+ m= 100
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 500
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(x)
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+Print(readHeap(v1))
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+unlock(x)
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+21
+
+File Table: 
+
+Heap: 
+1->21
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v1, 20);{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v1, 20)
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{new(v2, 20);{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+new(v2, 20)
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}});{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}})
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(q);{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}});{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(q)
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+fork({lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}})
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}});{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{lock(x);{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+fork({{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}})
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+lock(x)
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 200;{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)+ 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+{writeHeap(v1,(readHeap(v1)- 1));unlock(x)}
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)};{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 200
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)+ 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+writeHeap(v1,(readHeap(v1)- 1))
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))});unlock(q)}
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->20
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 300;{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 18
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 19
+
+Execution Stack: 
+unlock(x)
+
+Symbol Table: 
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+fork({lock(q);writeHeap(v2,(readHeap(v2)+ 5))})
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 300
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->200
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+unlock(q)
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+{lock(q);writeHeap(v2,(readHeap(v2)+ 5))}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 400;{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{ m= 100;{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+lock(q)
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 400
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->300
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+ m= 100
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 21
+
+Execution Stack: 
+writeHeap(v2,(readHeap(v2)+ 5))
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->20
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{ z= 500;{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+{lock(q);{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+ z= 500
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->400
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(x);{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(x)
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{Print(readHeap(v1));{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+Print(readHeap(v1))
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{unlock(x);{lock(q);{Print(readHeap(v2));unlock(q)}}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+unlock(x)
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{lock(q);{Print(readHeap(v2));unlock(q)}}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+lock(q)
+{Print(readHeap(v2));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+z->500
+v1->1
+v2->2
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::
+ID: 20
+
+Execution Stack: 
+lock(q)
+{writeHeap(v2,(readHeap(v2)+ 1));unlock(q)}
+
+Symbol Table: 
+q->2
+x->1
+v1->1
+v2->2
+m->100
+
+Output: 
+19
+
+File Table: 
+
+Heap: 
+1->19
+2->25
+::::::::::::::::::::::::::::

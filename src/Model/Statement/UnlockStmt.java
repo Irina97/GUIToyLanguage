@@ -27,10 +27,15 @@ public class UnlockStmt implements Statement {
                 throw new StatementException("The variable is not in the table(Unlock Statement)");
             int res = symTable.get(varName);
 
-            if(lockTable.containsKey(res)){
-                lockTable.remove(res);
-                lockTable.put(res,-1);
+            if(lockTable.containsKey(res)==true ) {
+                if (lockTable.get(res) == p.getID()) {
+                    lockTable.remove(res);
+                    lockTable.put(res, -1);
+                }
+            }else{
+                
             }
+
 
         }catch(Exception e){
             throw new StatementException(e.getMessage());

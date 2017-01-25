@@ -245,6 +245,20 @@ public class Main extends Application {
         IRepository repo16=new Repository("logFile.txt");
         repo16.addProgramState(prg16);
         Controller ctrl16=new Controller(repo16);
+
+        //Statement 17
+        Statement s17=new CompStmt(new NewLockStmt("q"),
+                         new CompStmt(new ForkStmt(new CompStmt(new AssignStmt("v",new ConstExpr(1)),
+                                                        new CompStmt(new PrintStmt(new VarExpr("v")),
+                                                                new LockStmt("q") ))),
+                        new LockStmt("q")));
+
+        ProgramState prg17=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+                new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s17);
+        IRepository repo17=new Repository("logFile.txt");
+        repo17.addProgramState(prg17);
+        Controller ctrl17=new Controller(repo17);
+
         controllers=new ArrayList<>();
         controllers.clear();
         controllers.add(ctrl1);
@@ -263,6 +277,7 @@ public class Main extends Application {
         controllers.add(ctrl14);
         controllers.add(ctrl15);
         controllers.add(ctrl16);
+        controllers.add(ctrl17);
 
         prgRepresentation=new ArrayList<>();
         prgRepresentation.clear();
@@ -282,7 +297,7 @@ public class Main extends Application {
         prgRepresentation.add(s14.toString());
         prgRepresentation.add(s15.toString());
         prgRepresentation.add(s16.toString());
-
+        prgRepresentation.add(s17.toString());
     }
 
     public static void main(String[] args) {
