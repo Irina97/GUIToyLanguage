@@ -9,6 +9,7 @@ import java.io.Serializable;
  * Created by dell on 10/19/2016.
  */
 public class ProgramState implements Serializable{
+    private ILockTable<Integer,Integer> lockTable;
     private IExeStack<Statement> exeStack;
     private ISymbolTable<String,Integer> table;
     private IOut<Integer> out;
@@ -17,8 +18,9 @@ public class ProgramState implements Serializable{
     private Statement stm;
     private int ID;
 
-    public ProgramState(IExeStack<Statement> e,ISymbolTable<String,Integer> t,IOut<Integer> o,IFileTable<Integer,FileData> f,
+    public ProgramState(ILockTable<Integer,Integer> lockTable,IExeStack<Statement> e,ISymbolTable<String,Integer> t,IOut<Integer> o,IFileTable<Integer,FileData> f,
             IHeap<Integer,Integer> h,Statement s){
+        this.lockTable=lockTable;
         exeStack=e;
         table=t;
         out=o;
@@ -44,6 +46,14 @@ public class ProgramState implements Serializable{
     }
     public IFileTable<Integer,FileData> getFileTable(){return fileTable;}
     public IHeap<Integer,Integer> getHeap(){ return heap;}
+
+    public ILockTable<Integer, Integer> getLockTable() {
+        return lockTable;
+    }
+
+    public void setLockTable(ILockTable<Integer, Integer> lockTable) {
+        this.lockTable = lockTable;
+    }
 
     public void setExeStack(IExeStack<Statement> newStack){
         exeStack=newStack;
@@ -73,6 +83,8 @@ public class ProgramState implements Serializable{
         s.append(fileTable);s.append("\n");
         s.append("Heap: ");
         s.append(heap);s.append("\n");
+        s.append("Lock Table: ");
+        s.append(lockTable);s.append("\n");
         return s.toString();
     }
     public boolean isNotCompleted(){

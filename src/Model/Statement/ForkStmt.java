@@ -23,8 +23,8 @@ public class ForkStmt implements Statement {
         IHeap<Integer,Integer> heap = p.getHeap();
         IOut<Integer> out=p.getOut();
         IFileTable<Integer,FileData> fileTable=p.getFileTable();
-
-        ProgramState newPrgState=new ProgramState(new ExeStack<>(), newSymbolTable, out, fileTable,heap,stmt);
+        ILockTable<Integer,Integer> lockTable=p.getLockTable();
+        ProgramState newPrgState=new ProgramState(lockTable,new ExeStack<>(), newSymbolTable, out, fileTable,heap,stmt);
         return newPrgState;
 
     }

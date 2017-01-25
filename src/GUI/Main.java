@@ -43,7 +43,7 @@ public class Main extends Application {
     private void initializeAttributes() {
         //Statement 1
         Statement s1 = new CompStmt(new AssignStmt("v",new ConstExpr(2)),new PrintStmt(new VarExpr("v")));
-        ProgramState prg1=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg1=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s1);
         IRepository repo1=new Repository("logFile.txt");
         repo1.addProgramState(prg1);
@@ -54,7 +54,7 @@ public class Main extends Application {
                 new AssignStmt("a", new AritmExpr('+',new ConstExpr(2),new AritmExpr('*',new ConstExpr(3),new ConstExpr(5)))),
                 new CompStmt(new AssignStmt("b",new AritmExpr('+',new VarExpr("a"),new ConstExpr(1))),
                         new PrintStmt(new VarExpr("b"))));
-        ProgramState prg2=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg2=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s2);
         IRepository repo2=new Repository("logFile.txt");
         repo2.addProgramState(prg2);
@@ -65,7 +65,7 @@ public class Main extends Application {
                 new CompStmt(new IfStmt(new VarExpr("a"),new AssignStmt("v",new ConstExpr(2)),
                         new AssignStmt("v",new ConstExpr(3))),
                         new PrintStmt(new VarExpr("v"))));
-        ProgramState prg3=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg3=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s3);
         IRepository repo3=new Repository("logFile.txt");
         repo3.addProgramState(prg3);
@@ -79,7 +79,7 @@ public class Main extends Application {
         CloseFileStmt close=new CloseFileStmt(new VarExpr("var_f"));
 
         Statement s4=new CompStmt(new CompStmt(open,read),new CompStmt(new CompStmt(print,read),new CompStmt(print,close)));
-        ProgramState prg4=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg4=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s4);
         IRepository repo4=new Repository("logFile.txt");
         repo4.addProgramState(prg4);
@@ -89,7 +89,7 @@ public class Main extends Application {
         Statement s5=new CompStmt(new CompStmt(open,read),new CompStmt(print, new CompStmt
                 (new IfStmt(new VarExpr("var_c"),new CompStmt(read,print),printZero),close)));
 
-        ProgramState prg5=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg5=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s5);
         IRepository repo5=new Repository("logFile.txt");
         repo5.addProgramState(prg5);
@@ -103,7 +103,7 @@ public class Main extends Application {
 
         Statement s6=new CompStmt(new CompStmt(open6,read6),new CompStmt(print,
                 new CompStmt(new IfStmt(new VarExpr("var_c"),new CompStmt(read,print6),printZero),close6)));
-        ProgramState prg6=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg6=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s6);
         IRepository repo6=new Repository("logFile.txt");
         repo6.addProgramState(prg6);
@@ -112,7 +112,7 @@ public class Main extends Application {
         //Statement 7 Create new Heap Entry
         Statement s7=new CompStmt(new NewHeapEntry("v",new ConstExpr(20)),new CompStmt(new NewHeapEntry("a",new ConstExpr(22)),
                 new PrintStmt(new VarExpr("v"))));
-        ProgramState prg7=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg7=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s7);
         IRepository repo7=new Repository("logFile.txt");
         repo7.addProgramState(prg7);
@@ -122,7 +122,7 @@ public class Main extends Application {
         Statement s8=new CompStmt(new CompStmt(new NewHeapEntry("v",new ConstExpr(20)),new NewHeapEntry("a",new ConstExpr(22))),
                 new CompStmt(new PrintStmt(new AritmExpr('+',new ConstExpr(100),new ReadHeapExpr("v"))),
                         new PrintStmt(new AritmExpr('+',new ConstExpr(100),new ReadHeapExpr("a")))));
-        ProgramState prg8=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg8=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s8);
         IRepository repo8=new Repository("logFile.txt");
         repo8.addProgramState(prg8);
@@ -132,7 +132,7 @@ public class Main extends Application {
                 new CompStmt(new WriteHeapStmt("a",new ConstExpr(30)),
                         new CompStmt(new PrintStmt(new VarExpr("a")),new PrintStmt(new ReadHeapExpr("a")))));
 
-        ProgramState prg9=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg9=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s9);
         IRepository repo9=new Repository("logFile.txt");
         repo9.addProgramState(prg9);
@@ -143,7 +143,7 @@ public class Main extends Application {
                 new CompStmt(new CompStmt(new WriteHeapStmt("a",new ConstExpr(30)),new PrintStmt(new VarExpr("a"))),
                         new CompStmt(new PrintStmt(new ReadHeapExpr("a")), new AssignStmt("a",new ConstExpr(0)))));
 
-        ProgramState prg10=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg10=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s10);
         IRepository repo10=new Repository("logFile.txt");
         repo10.addProgramState(prg10);
@@ -151,7 +151,7 @@ public class Main extends Application {
 
         //Statement 11 Comparison Expression
         Statement s11= new AssignStmt("a",new AritmExpr('+',new ConstExpr(10),new ComparisonExpr("<",new ConstExpr(2),new ConstExpr(6))));
-        ProgramState prg11=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg11=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s11);
         IRepository repo11=new Repository("logFile.txt");
         repo11.addProgramState(prg11);
@@ -161,7 +161,7 @@ public class Main extends Application {
         Statement s12=new AssignStmt("a",new ComparisonExpr("<",new AritmExpr('+',new ConstExpr(10),new ConstExpr(2)),
                 new ConstExpr(6)));
 
-        ProgramState prg12=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg12=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s12);
         IRepository repo12=new Repository("logFile.txt");
         repo12.addProgramState(prg12);
@@ -172,7 +172,7 @@ public class Main extends Application {
                         new CompStmt(new PrintStmt(new VarExpr("v")), new AssignStmt("v",
                                 new AritmExpr('-',new VarExpr("v"),new ConstExpr(1))))),new PrintStmt(new VarExpr("v"))));
 
-        ProgramState prg13=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg13=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s13);
         IRepository repo13=new Repository("logFile.txt");
         repo13.addProgramState(prg13);
@@ -187,7 +187,7 @@ public class Main extends Application {
                                         new CompStmt(new ForkStmt(new PrintStmt(new ReadHeapExpr("a"))),
                                                 new CompStmt(new PrintStmt(new VarExpr("v")),new PrintStmt( new ReadHeapExpr("a"))))))));
 
-        ProgramState prg14=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg14=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s14);
         IRepository repo14=new Repository("logFile.txt");
         repo14.addProgramState(prg14);
@@ -204,7 +204,7 @@ public class Main extends Application {
 
                         new PrintStmt(new AritmExpr('*',new VarExpr("v"),new ConstExpr(10)))));
 
-        ProgramState prg15=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+        ProgramState prg15=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s15);
         IRepository repo15=new Repository("logFile.txt");
         repo15.addProgramState(prg15);
