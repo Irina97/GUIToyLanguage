@@ -211,13 +211,40 @@ public class Main extends Application {
         Controller ctrl15=new Controller(repo15);
 
         //Statement 16 Lock Statement
-        Statement s16=new CompStmt(new NewLockStmt("x"),new NewLockStmt("x"));
+        Statement insideFork2=new CompStmt(new LockStmt("x"),
+                                            new CompStmt(new WriteHeapStmt("v1",new AritmExpr('-',new ReadHeapExpr("v1"),new ConstExpr(1))),
+                                                    new UnlockStmt("x")));
+        Statement insideFork1=new CompStmt(new LockStmt("x"),
+                new CompStmt(new WriteHeapStmt("v1",new AritmExpr('+',new ReadHeapExpr("v1"),new ConstExpr(1))),
+                        new UnlockStmt("x")));
+        Statement insideFork3Row1=new CompStmt(new ForkStmt(new CompStmt(new LockStmt("q"),new WriteHeapStmt("v2",new AritmExpr('+',new ReadHeapExpr("v2"),new ConstExpr(5))))),
+                                    new UnlockStmt("q"));
+
+        Statement insideFork3Row2=new CompStmt(new AssignStmt("m",new ConstExpr(100)),
+                                                new CompStmt(new LockStmt("q"),
+                                                        new CompStmt(new WriteHeapStmt("v2",new AritmExpr('+',new ReadHeapExpr("v2"),new ConstExpr(1))),new UnlockStmt("q"))));
+
+        Statement s16=new CompStmt(new NewHeapEntry("v1",new ConstExpr(20)),
+                                    new CompStmt(new NewHeapEntry("v2",new ConstExpr(20)),
+                                    new CompStmt(new NewLockStmt("x"),
+                                    new CompStmt(new ForkStmt(new CompStmt((new ForkStmt(insideFork2)),insideFork1)),
+                                    new CompStmt(new NewLockStmt("q"),
+                                    new CompStmt(new ForkStmt(new CompStmt(insideFork3Row1,insideFork3Row2)),
+                                    new CompStmt(new AssignStmt("z",new ConstExpr(200)),
+                                    new CompStmt(new AssignStmt("z",new ConstExpr(300)),
+                                    new CompStmt(new AssignStmt("z",new ConstExpr(400)),
+                                    new CompStmt(new AssignStmt("z",new ConstExpr(500)),
+                                    new CompStmt(new LockStmt("x"),
+                                    new CompStmt(new PrintStmt(new ReadHeapExpr("v1")),
+                                    new CompStmt(new UnlockStmt("x"),
+                                    new CompStmt(new LockStmt("q"),
+                                    new CompStmt(new PrintStmt(new ReadHeapExpr("v2")),new UnlockStmt("q"))))))))))))))));
+
         ProgramState prg16=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
                 new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s16);
         IRepository repo16=new Repository("logFile.txt");
         repo16.addProgramState(prg16);
         Controller ctrl16=new Controller(repo16);
-
         controllers=new ArrayList<>();
         controllers.clear();
         controllers.add(ctrl1);

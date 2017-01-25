@@ -26,11 +26,11 @@ public class LockStmt implements Statement {
         try{
             lock.lock();
             if(symbolTable.containsKey(varName)==false)
-                throw new StatementException("The variable is not in the symbol table");
+                throw new StatementException("The variable is not in the symbol table(Lock Statement)");
             int res=symbolTable.get(varName);
 
             if(lockTable.containsKey(res)==false)
-                throw new StatementException("The id is not in the lock table");
+                throw new StatementException("The id is not in the lock table(Lock Statement)");
 
             if(lockTable.get(res)==-1){
                 lockTable.remove(res);
