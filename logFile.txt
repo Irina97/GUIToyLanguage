@@ -1,77 +1,6 @@
 ID: 15
 
 Execution Stack: 
-{ v= 20;{for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}}
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
- v= 20
-{for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-{for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}
-
-Symbol Table: 
-v->20
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})}
-Print((v* 10))
-
-Symbol Table: 
-v->20
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-{ v= 0;while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}}
-Print((v* 10))
-
-Symbol Table: 
-v->20
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
  v= 0
 while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
 Print((v* 10))
@@ -149,7 +78,7 @@ File Table:
 
 Heap: 
 ::::::::::::::::::::::::::::
-ID: 16
+ID: 17
 
 Execution Stack: 
 {Print(v); v=(v+ 1)}
@@ -178,7 +107,7 @@ File Table:
 
 Heap: 
 ::::::::::::::::::::::::::::
-ID: 16
+ID: 17
 
 Execution Stack: 
 Print(v)
@@ -210,7 +139,7 @@ File Table:
 
 Heap: 
 ::::::::::::::::::::::::::::
-ID: 16
+ID: 17
 
 Execution Stack: 
  v=(v+ 1)
@@ -260,7 +189,7 @@ File Table:
 
 Heap: 
 ::::::::::::::::::::::::::::
-ID: 17
+ID: 18
 
 Execution Stack: 
 {Print(v); v=(v+ 1)}
@@ -291,7 +220,7 @@ File Table:
 
 Heap: 
 ::::::::::::::::::::::::::::
-ID: 17
+ID: 18
 
 Execution Stack: 
 Print(v)
@@ -311,59 +240,6 @@ ID: 15
 
 Execution Stack: 
 {fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->2
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 17
-
-Execution Stack: 
- v=(v+ 1)
-
-Symbol Table: 
-v->1
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-fork({Print(v); v=(v+ 1)})
- v=(v+ 1)
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->2
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
- v=(v+ 1)
 while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
 Print((v* 10))
 
@@ -379,6 +255,59 @@ File Table:
 Heap: 
 ::::::::::::::::::::::::::::
 ID: 18
+
+Execution Stack: 
+ v=(v+ 1)
+
+Symbol Table: 
+v->1
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+fork({Print(v); v=(v+ 1)})
+ v=(v+ 1)
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->2
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 15
+
+Execution Stack: 
+ v=(v+ 1)
+while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
+Print((v* 10))
+
+Symbol Table: 
+v->2
+
+Output: 
+0
+1
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 19
 
 Execution Stack: 
 {Print(v); v=(v+ 1)}
@@ -411,471 +340,7 @@ File Table:
 
 Heap: 
 ::::::::::::::::::::::::::::
-ID: 18
-
-Execution Stack: 
-Print(v)
- v=(v+ 1)
-
-Symbol Table: 
-v->2
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-Print((v* 10))
-
-Symbol Table: 
-v->3
-
-Output: 
-0
-1
-2
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 18
-
-Execution Stack: 
- v=(v+ 1)
-
-Symbol Table: 
-v->2
-
-Output: 
-0
-1
-2
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-{ v= 20;{for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}}
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
- v= 20
-{for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-{for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})};Print((v* 10))}
-
-Symbol Table: 
-v->20
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-for(v= 0;v< 3;v=(v+ 1)){fork({Print(v); v=(v+ 1)})}
-Print((v* 10))
-
-Symbol Table: 
-v->20
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-{ v= 0;while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}}
-Print((v* 10))
-
-Symbol Table: 
-v->20
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
- v= 0
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->20
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->0
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-{fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->0
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-fork({Print(v); v=(v+ 1)})
- v=(v+ 1)
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->0
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
- v=(v+ 1)
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->0
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-{Print(v); v=(v+ 1)}
-
-Symbol Table: 
-v->0
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->1
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-Print(v)
- v=(v+ 1)
-
-Symbol Table: 
-v->0
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-{fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->1
-
-Output: 
-0
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
- v=(v+ 1)
-
-Symbol Table: 
-v->0
-
-Output: 
-0
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-fork({Print(v); v=(v+ 1)})
- v=(v+ 1)
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->1
-
-Output: 
-0
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
- v=(v+ 1)
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->1
-
-Output: 
-0
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 17
-
-Execution Stack: 
-{Print(v); v=(v+ 1)}
-
-Symbol Table: 
-v->1
-
-Output: 
-0
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->2
-
-Output: 
-0
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 17
-
-Execution Stack: 
-Print(v)
- v=(v+ 1)
-
-Symbol Table: 
-v->1
-
-Output: 
-0
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-{fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->2
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 17
-
-Execution Stack: 
- v=(v+ 1)
-
-Symbol Table: 
-v->1
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-fork({Print(v); v=(v+ 1)})
- v=(v+ 1)
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->2
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
- v=(v+ 1)
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->2
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 18
-
-Execution Stack: 
-{Print(v); v=(v+ 1)}
-
-Symbol Table: 
-v->2
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 15
-
-Execution Stack: 
-while((v< 3)){fork({Print(v); v=(v+ 1)}); v=(v+ 1)}
-Print((v* 10))
-
-Symbol Table: 
-v->3
-
-Output: 
-0
-1
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 18
+ID: 19
 
 Execution Stack: 
 Print(v)
@@ -909,7 +374,7 @@ File Table:
 
 Heap: 
 ::::::::::::::::::::::::::::
-ID: 18
+ID: 19
 
 Execution Stack: 
  v=(v+ 1)
@@ -921,179 +386,6 @@ Output:
 0
 1
 2
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-{newLock(x);newLock(x)}
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-newLock(x)
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-
-Symbol Table: 
-x->1
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-{newLock(x);newLock(x)}
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-newLock(x)
-
-Symbol Table: 
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-newLock(x)
-
-Symbol Table: 
-x->1
-
-Output: 
-
-File Table: 
-
-Heap: 
-::::::::::::::::::::::::::::
-ID: 16
-
-Execution Stack: 
-{newLock(x);newLock(x)}
-
-Symbol Table: 
-
-Output: 
 
 File Table: 
 

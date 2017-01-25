@@ -6,6 +6,8 @@ import Utils.ILockTable;
 import Utils.ISymbolTable;
 import Utils.LockIDGenerator;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * Created by dell on 1/25/2017.
  */
@@ -19,9 +21,10 @@ public class NewLockStmt implements Statement {
     @Override
     public ProgramState execute(ProgramState p) throws StatementException {
         ISymbolTable<String,Integer> symbolTable=p.getTable();
-        IHeap<Integer,Integer> heap=p.getHeap();
         ILockTable<Integer,Integer> lockTable=p.getLockTable();
+        ReentrantLock lock = new ReentrantLock();
         try{
+            lock.lock();
             if(symbolTable.containsKey(varName)){
                 int value=symbolTable.get(varName);
                 lockTable.remove(value);
@@ -39,6 +42,8 @@ public class NewLockStmt implements Statement {
 
         }catch (Exception e){
             throw new StatementException(e.getMessage());
+        }finally {
+            lock.unlock();
         }
         return null;
     }
