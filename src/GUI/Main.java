@@ -193,6 +193,23 @@ public class Main extends Application {
         repo14.addProgramState(prg14);
         Controller ctrl14=new Controller(repo14);
 
+        //Statement 15 For Statement
+        Statement s15=new CompStmt(new AssignStmt("v",new ConstExpr(20)),
+                new CompStmt(new ForStmt("v",
+                        new ConstExpr(0),
+                        new ConstExpr(3),
+                        new AritmExpr('+',new VarExpr("v"),new ConstExpr(1)),
+                        new ForkStmt(new CompStmt(new PrintStmt(new VarExpr("v")),
+                                new AssignStmt("v",new AritmExpr('+',new VarExpr("v"),new ConstExpr(1)))))),
+
+                        new PrintStmt(new AritmExpr('*',new VarExpr("v"),new ConstExpr(10)))));
+
+        ProgramState prg15=new ProgramState(new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+                new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s15);
+        IRepository repo15=new Repository("logFile.txt");
+        repo15.addProgramState(prg15);
+        Controller ctrl15=new Controller(repo15);
+
         controllers=new ArrayList<>();
         controllers.clear();
         controllers.add(ctrl1);
@@ -209,6 +226,7 @@ public class Main extends Application {
         controllers.add(ctrl12);
         controllers.add(ctrl13);
         controllers.add(ctrl14);
+        controllers.add(ctrl15);
 
         prgRepresentation=new ArrayList<>();
         prgRepresentation.clear();
@@ -226,6 +244,7 @@ public class Main extends Application {
         prgRepresentation.add(s12.toString());
         prgRepresentation.add(s13.toString());
         prgRepresentation.add(s14.toString());
+        prgRepresentation.add(s15.toString());
 
     }
 
