@@ -210,6 +210,14 @@ public class Main extends Application {
         repo15.addProgramState(prg15);
         Controller ctrl15=new Controller(repo15);
 
+        //Statement 16 Lock Statement
+        Statement s16=new CompStmt(new NewLockStmt("x"),new NewLockStmt("x"));
+        ProgramState prg16=new ProgramState(new LockTable<>(),new ExeStack<Statement>(), new SymbolTable<String,Integer>(),
+                new Out<Integer>(),new FileTable<Integer,FileData>(),new Heap<Integer,Integer>(),s16);
+        IRepository repo16=new Repository("logFile.txt");
+        repo16.addProgramState(prg16);
+        Controller ctrl16=new Controller(repo16);
+
         controllers=new ArrayList<>();
         controllers.clear();
         controllers.add(ctrl1);
@@ -227,6 +235,7 @@ public class Main extends Application {
         controllers.add(ctrl13);
         controllers.add(ctrl14);
         controllers.add(ctrl15);
+        controllers.add(ctrl16);
 
         prgRepresentation=new ArrayList<>();
         prgRepresentation.clear();
@@ -245,6 +254,7 @@ public class Main extends Application {
         prgRepresentation.add(s13.toString());
         prgRepresentation.add(s14.toString());
         prgRepresentation.add(s15.toString());
+        prgRepresentation.add(s16.toString());
 
     }
 

@@ -926,3 +926,217 @@ File Table:
 
 Heap: 
 ::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);newLock(x)}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+newLock(x)
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+
+Symbol Table: 
+x->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);newLock(x)}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+newLock(x)
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+
+Symbol Table: 
+x->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);newLock(x)}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+{newLock(x);newLock(x)}
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+newLock(x)
+
+Symbol Table: 
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
+ID: 16
+
+Execution Stack: 
+newLock(x)
+
+Symbol Table: 
+x->1
+
+Output: 
+
+File Table: 
+
+Heap: 
+::::::::::::::::::::::::::::
