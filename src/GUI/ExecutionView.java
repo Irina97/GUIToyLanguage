@@ -43,6 +43,9 @@ public class ExecutionView {
     private TableView<SymbolTableGUI> symTable=new TableView<>();
     private static final ObservableList<SymbolTableGUI> symTableData=FXCollections.observableArrayList();
 
+    private TableView<LockTableView> lockTable=new TableView<>();
+    private static final ObservableList<LockTableView> lockTableData=FXCollections.observableArrayList();
+
     private ListView<String> prgState;
     private ObservableList prgStateDataa =FXCollections.observableArrayList();
 
@@ -87,11 +90,13 @@ public class ExecutionView {
         Node symT=initSymTable();
         Node prgS=initPrgState();
         Node exeS=initExeStack();
+        Node lockT=initLockTable();
         gridPane.add(heapT,1,1);
         gridPane.add(fileT,2,1);
         gridPane.add(symT,3,1);
         gridPane.add(prgS,4,1);
         gridPane.add(exeS,5,1);
+        gridPane.add(lockT,6,1);
         return gridPane;
     }
     private Node initExeStack(){
@@ -105,8 +110,8 @@ public class ExecutionView {
         anchorPane.setLeftAnchor(title,20d);
 
         exeStack=new ListView<>(exeStackData);
-        exeStack.setMinWidth(500d);
-        exeStack.setMaxWidth(500d);
+        exeStack.setMinWidth(300d);
+        exeStack.setMaxWidth(300d);
 
         anchorPane.setTopAnchor(exeStack,20d);
         anchorPane.setBottomAnchor(exeStack,20d);
@@ -117,6 +122,37 @@ public class ExecutionView {
         anchorPane.getChildren().add(exeStack);
 
         return anchorPane;
+    }
+
+    private Node initLockTable(){
+        AnchorPane anchorPane=new AnchorPane();
+        Label title=new Label("Lock table");
+        title.setFont(new Font(16d));
+        title.setStyle("-fx-font-weight: bold");
+
+        anchorPane.setRightAnchor(title,20d);
+        anchorPane.setLeftAnchor(title,20d);
+
+        TableColumn address=new TableColumn("Address");
+        TableColumn value=new TableColumn("Value");
+        address.setCellValueFactory(new PropertyValueFactory<LockTableView,String>("address"));
+        value.setCellValueFactory(new PropertyValueFactory<LockTableView,Integer>("value"));
+
+
+        lockTable.setMaxWidth(163d);
+        lockTable.setMinWidth(163d);
+        lockTable.getColumns().addAll(address,value);
+        lockTable.setItems(lockTableData);
+
+        anchorPane.setTopAnchor(lockTable,20d);
+        anchorPane.setBottomAnchor(lockTable,20d);
+        anchorPane.setRightAnchor(lockTable,20d);
+        anchorPane.setLeftAnchor(lockTable,20d);
+
+        anchorPane.getChildren().add(title);
+        anchorPane.getChildren().add(lockTable);
+        return anchorPane;
+
     }
 
     private Node initHeapTable() {
@@ -300,6 +336,21 @@ public class ExecutionView {
         }
     }
 
+    private void refreshLockTable(){
+        lockTableData.clear();
+        if(prgStateIndex==-1)
+            prgStateIndex=0;
+        try{
+            ProgramState p=ctrl.getRepo().getProgramState(prgStateIndex);
+            ILockTable<Integer,Integer> lockTable=p.getLockTable();
+
+            for(Integer i:lockTable.keySet()){
+                lockTableData.add(new LockTableView(i,lockTable.get(i)));
+            }
+
+        }catch(Exception e){}
+    }
+
     private void refreshPrgState(){
         prgStateDataa.clear();
         if (prgStateIndex == -1)
@@ -390,6 +441,7 @@ public class ExecutionView {
         refreshHeapTable();
         refreshFileTable();
         refreshOutput();
+        refreshLockTable();
     }
 
     public BorderPane getExecutionView(){
